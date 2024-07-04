@@ -979,7 +979,7 @@ describe HamlCoffeeAssets::Compiler do
         $o1.push("<span class='small'>Not really</span>");
         return $o1.join("\\n");
       }))));
-      return $o.join("\\n").replace(/\\s([\\w-]+)='true'/mg, ' $1').replace(/\\s([\\w-]+)='false'/mg, '').replace(/\\s(?:id|class)=(['"])(\\1)/mg, "");
+      return $o.join("\\n").replace(/\\s([\\w-]+)='true'/mg, ' $1').replace(/\\s([\\w-]+)='false'/mg, '').replace(/\\s(?:id|class)=(['"])(\\\\1)/mg, "");
     }).call(window.HAML.context(context));
   };
 
@@ -1012,7 +1012,7 @@ describe HamlCoffeeAssets::Compiler do
         $o1.push("<span class='small'>Not really</span>");
         return $o1.join("\\n");
       }))));
-      return $o.join("\\n").replace(/\\s([\\w-]+)='true'/mg, ' $1').replace(/\\s([\\w-]+)='false'/mg, '').replace(/\\s(?:id|class)=(['"])(\\1)/mg, "");
+      return $o.join("\\n").replace(/\\s([\\w-]+)='true'/mg, ' $1').replace(/\\s([\\w-]+)='false'/mg, '').replace(/\\s(?:id|class)=(['"])(\\\\1)/mg, "");
     }).call(window.HAML.context(context));
   };
 
